@@ -1,0 +1,28 @@
+Introduction
+============
+
+This is a simple test to reproduce an issue that we have observed with
+riak_search.  Please see the riak.png file in this directory to get
+an idea of the observed issue.
+
+Prerequisites
+=============
+
+1.  riaksearch (https://github.com/basho/riak_search/)
+2.  the riak python client (https://github.com/basho/riak-python-client)
+3.  matplotlib (which requires numpy)
+
+
+Setup
+=====
+
+1.  check/edit the config.py file
+2.  install search hook
+    search-cmd install test
+3.  clear the schema cache
+    search-cmd clear-schema-cache
+
+Testing
+=======
+
+python multi-mechanize.py riak_test
